@@ -7,13 +7,28 @@
 	<title>Randome Quote</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="styles/mystyles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+	<!-- scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<div class="container">
 		<!-- title -->
 		<div class="title">
-			<h1>Randome Quote</h1>
+			<h1>Randomia</h1>
+			<p>Press a button to get a random quote!</p>
+		</div>
+
+		<!-- button -->
+		<div>
+			<!-- Since there is only one button at this page, 
+			I did not give it any special class except the defaults. -->
+			<a href="#" class="btn btn-default btn-lg">Get a quote!</a>
+			<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
 		</div>
 
 		<!-- quote section -->
@@ -22,15 +37,6 @@
 			<p class="quote-body"></p>
 			<p class="quote-author"></p>
 		</div>
-
-		<!-- button -->
-		<div class="quote-button">
-			<a href="#" class="btn btn-default btn-lg">Get a quote!</a>
-		</div>
 	</div>
-
-	<!-- scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="scripts/app.js"></script>
 </body>
 </html>
