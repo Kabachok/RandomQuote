@@ -5,7 +5,7 @@ var quoteCollection = [
 						"I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.///Marilyn Monroe",
 						"Don't be afraid of your fears. They're not there to scare you. They're there to let you know that something is worth it.///C. JoyBell C.",
 						"Thinking something does not make it true. Wanting something does not make it real.///Michelle Hodkin",
-						"The unhappiest people in this world, are those who care the most about what other people think.///",
+						"The unhappiest people in this world, are those who care the most about what other people think.///C. JoyBell C.",
 						"No one loses anyone, because no one owns anyone. That is the true experience of freedom: having the most important thing in the world without owning it.///Paulo Coelho",
 						"Success is not final, failure is not fatal: it is the courage to continue that counts.///Winston S. Churchill",
 						"If at first you don't succeed, try, try again. Then quit. No use being a damn fool about it.///W.C. Fields",
@@ -33,6 +33,7 @@ $(document).ready(function(){
 	$(".btn").click();
 });
 
+// getting the random quote
 function getQuote(){
 	var len = quoteCollection.length;
 	var randomIndex = Math.floor((Math.random()*len)+1);
@@ -41,6 +42,7 @@ function getQuote(){
 	return quoteData;
 }
 
+// setting a tweet button
 function setTweet(quote){
 	// set tweet's data
 	var tweet = quote[0] + " " + quote[1];
