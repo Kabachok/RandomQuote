@@ -51,6 +51,14 @@ p{
 	text-align: right;
 	padding-right: 20%;
 }
+.twitter-share-button{
+	vertical-align: middle;
+	margin-top: 10px;
+	opacity: 0.8;
+}
+.tweet-section{
+	display: inline;
+}
 
 @media(max-width: 650px){
 	.quote-author{

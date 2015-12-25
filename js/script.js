@@ -28,6 +28,7 @@ $(document).ready(function(){
 		var quote = getQuote();
 		$(".quote-body").html(quote[0]);
 		$(".quote-author").html(quote[1]);
+		setTweet(quote);
 	});
 	$(".btn").click();
 });
@@ -39,8 +40,33 @@ function getQuote(){
 	var quoteData = quoteRec.split("///");
 	return quoteData;
 }
-// TODO: create a random number randomIndex
 
-// TODO: select an item from the quoteCollection at the randomIndex position
+function setTweet(quote){
+	// set tweet's data
+	var tweet = quote[0] + " " + quote[1];
+	var link = document.createElement('a');
+	link.setAttribute('href', 'https://twitter.com/share');
+	link.setAttribute('class', 'twitter-share-button');
+	link.setAttribute("data-text", tweet);
+	link.setAttribute("data-size", "large");
+	$(".tweet-section").html(link);
+	twttr.widgets.load();
+}
 
-// TODO: send choosen item to the html document
+// tweet text
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+  t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
